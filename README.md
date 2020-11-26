@@ -71,6 +71,21 @@ Dice score (fscore) is used as the metric for evaluating the performance of the 
 |Coronal| ![predicted](./images/coronal_pred.gif) | ![actual](./images/coronal_label.gif) |
 |Sagittal| ![predicted](./images/sagittal_pred.gif) | ![actual](./images/sagittal_label.gif) |
 
+## Experiments Attempted
+- Normalised images between 0-1
+- Used only images that have at least 500 pixels of each class
+- Trained model with just 800 images
+- Tried different number of decoder channels
+- Reduced learning rate after the 40th epoch
+- Replaced softmax with sigmoid
+- Experimented with a variety of augmentation combinations
+
+## Further Work
+- Experiment with Cross Entropy Loss as the loss function
+- More carefully select the images instead of selecting all the images that have more than one segmentation pixel
+- Use more data for training/validating/testing instead of just 2000 images
+- Use a different backbone such as a DenseNet
+
 ## References
 <a id="1">[1]</a> 
 P. Yakubovskiy. Segmentation models pytorch. https://github.com/qubvel/segmentation_models.pytorch, 2020.
